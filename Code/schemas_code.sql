@@ -1,3 +1,4 @@
+-- Drop any tables that exist with the names
 DROP TABLE IF EXISTS department;
 DROP TABLE IF EXISTS department_employees;
 DROP TABLE IF EXISTS department_manager;
@@ -5,6 +6,7 @@ DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS salaries;
 DROP TABLE IF EXISTS titles;
 
+-- Create table for departments
 CREATE TABLE department(
 	department_number VARCHAR NOT NULL,
 	department_name VARCHAR NOT NULL,
@@ -13,6 +15,7 @@ CREATE TABLE department(
 	)
 );
 
+-- Create table for department employees
 CREATE TABLE department_employees(
 	employee_number INTEGER NOT NULL,
     department_number VARCHAR NOT NULL,
@@ -21,7 +24,7 @@ CREATE TABLE department_employees(
      )
 );
 
-
+-- Create table for department managers
 CREATE TABLE department_manager(
 	department_number VARCHAR NOT NULL,
 	employee_number INTEGER   NOT NULL,
@@ -30,6 +33,7 @@ CREATE TABLE department_manager(
      )
 );
 
+-- Create table for job titles
 CREATE TABLE titles (
 	title_id VARCHAR(20) NOT NULL,
 	title_name VARCHAR(30) NOT NULL,
@@ -38,6 +42,7 @@ CREATE TABLE titles (
 		)
 );
 
+-- Create table for employees
 CREATE TABLE employees (
 	employee_number INTEGER NOT NULL,
 	employee_title_id VARCHAR(30) NOT NULL,
@@ -52,7 +57,7 @@ CREATE TABLE employees (
 		)
 );
 
-
+-- Create table for salaries
 CREATE TABLE salaries (
 	employee_number INTEGER NOT NULL,
 	salary INTEGER NOT NULL,
@@ -61,6 +66,7 @@ CREATE TABLE salaries (
 	)
 );
 
+-- Altering Tables to add foreign keys (don't run until CSVs are uploaded)
 ALTER TABLE department_manager ADD CONSTRAINT fk_department_manager_department_number FOREIGN KEY(department_number)
 REFERENCES department (department_number);
 
