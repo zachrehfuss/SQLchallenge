@@ -22,11 +22,12 @@ from Query 1 to Query 8.
 
 # References for the Code
 I utilized the Xpert Learning Assistant to help debug my code for creating foreign keys.
-I also used it to tweak and debug my code for Query 1, debugging my code for Query 3 
-to place WHERE at the end of the line, debugging my code for Query 6 to specify
-which department_number I was referencing and catching a typo in Query 7 where I wrote
+I also used it to tweak and debug my code for Query 1, fixing my syntax for pulling the correct 
+years, debugging my code for Query 3 to place WHERE at the end of the line, debugging my code for Query 6 to 
+specify which department_number I was referencing and catching a typo in Query 7 where I wrote
 d0007, rather than d007. I used quick DBD's exported code to help create conditional keys 
-for my tables and altering my tables to add foreign keys. Lastly, I used SQL Shack
+for my tables and altering my tables to add foreign keys. My professor Thomas helped change my variables
+for hire date and birth date into "date" variables rather than VARCHAR. Finally, I used SQL Shack
 to help with coding and syntax for Query 4 to join multiple tables. 
 
 https://www.sqlshack.com/learn-sql-join-multiple-tables/
