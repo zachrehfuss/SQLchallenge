@@ -41,7 +41,7 @@ CREATE TABLE titles (
 CREATE TABLE employees (
 	employee_number INTEGER NOT NULL,
 	employee_title_id VARCHAR(30) NOT NULL,
-	birth_date VARCHAR(30) NOT NULL,
+	birth_date DATE NOT NULL,
 	first_name VARCHAR(30) NOT NULL,
 	last_name VARCHAR(30) NOT NULL,
 	sex VARCHAR(10) NOT NULL,

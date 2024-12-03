@@ -9,7 +9,7 @@ ON employees.employee_number = salaries.employee_number;
 -- for the employees who were hired in 1986
 SELECT first_name, last_name, hire_date
 FROM employees
-WHERE hire_date LIKE '/1986%';
+WHERE (hire_date) >= '1986-01-01' AND hire_date < '1987-01-01';
 
 -- Query 3: List the manager of each department along with their department number,
 -- department name, employee number, last name, and first name
